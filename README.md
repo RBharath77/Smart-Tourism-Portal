@@ -330,10 +330,10 @@ gunicorn app:app
 
 # 🎥 Demo
 <img width="519" height="719" alt="Screenshot 2026-08-04 at 2 49 28 PM" src="https://github.com/user-attachments/assets/9e4512fd-c380-417e-96d1-8e5c2d684333" />
+<img width="720" height="769" alt="Screenshot 2026-08-04 at 3 03 14 PM" src="https://github.com/user-attachments/assets/37313c5d-4fe8-47e6-bb00-07bf473cda6a" />
 <img width="720" height="723" alt="Screenshot 2026-08-04 at 3 01 20 PM" src="https://github.com/user-attachments/assets/1f55cea3-1b92-40d0-a62d-551b31156c86" />
 <img width="720" height="800" alt="Screenshot 2026-08-04 at 3 01 42 PM" src="https://github.com/user-attachments/assets/8cfd3845-4d5a-4185-9e41-b0f6db245777" />
 <img width="720" height="642" alt="Screenshot 2026-08-04 at 3 02 38 PM" src="https://github.com/user-attachments/assets/2ee128bd-23c1-46e8-9222-1cee8c2158bb" />
-<img width="720" height="769" alt="Screenshot 2026-08-04 at 3 03 14 PM" src="https://github.com/user-attachments/assets/37313c5d-4fe8-47e6-bb00-07bf473cda6a" />
 
 
 # 🤝 Contributing
