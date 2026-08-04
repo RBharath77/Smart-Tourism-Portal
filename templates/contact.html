@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Contact | Velora Trails{% endblock %}
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <span class="eyebrow">Contact experience</span>
+        <h1>Connect with the travel team</h1>
+        <p>Capture lead details professionally and notify the owner when a new enquiry is submitted.</p>
+    </div>
+</section>
+<section class="section-block compact-top">
+    <div class="container form-layout">
+        <form method="post" class="glass form-card">
+            <div class="form-grid">
+                <label>Full name<input type="text" name="full_name" required></label>
+                <label>Email<input type="email" name="email" required></label>
+                <label>Phone number<input type="tel" name="phone" required></label>
+                <label>Interest type
+                    <select name="interest_type" required>
+                        <option value="General Enquiry">General Enquiry</option>
+                        <option value="Tour Package">Tour Package</option>
+                        <option value="Corporate Group">Corporate Group</option>
+                        <option value="Partnership">Partnership</option>
+                    </select>
+                </label>
+                <label class="full-width">Your message<textarea name="message" rows="6" required placeholder="Tell us what experience you want..."></textarea></label>
+            </div>
+            <button class="btn btn-primary" type="submit">Send enquiry</button>
+        </form>
+        <div class="glass aside-card">
+            <h3>What happens next?</h3>
+            <ul class="feature-list">
+                <li>Your contact details are saved in the project database</li>
+                <li>A new lead notification is created for the owner</li>
+                <li>SMTP can send a real email alert when configured</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

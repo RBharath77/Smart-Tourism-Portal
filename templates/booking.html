@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Bookings | Velora Trails{% endblock %}
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <span class="eyebrow">Booking experience</span>
+        <h1>Create a premium travel enquiry</h1>
+        <p>This upgraded booking form stores visitor details and triggers an owner notification for fast follow-up.</p>
+    </div>
+</section>
+<section class="section-block compact-top">
+    <div class="container form-layout">
+        <form method="post" class="glass form-card">
+            <div class="form-grid">
+                <label>Full name<input type="text" name="full_name" required></label>
+                <label>Email<input type="email" name="email" required></label>
+                <label>Phone number<input type="tel" name="phone" required></label>
+                <label>Travel date<input type="date" name="travel_date" required></label>
+                <label>Travelers<input type="number" name="travelers" min="1" value="2" required></label>
+                <label>Budget range
+                    <select name="budget" required>
+                        <option value="Budget">Budget</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Luxury">Luxury</option>
+                    </select>
+                </label>
+                <label>Interest type
+                    <select name="interest_type" required>
+                        <option value="Hotel Booking">Hotel Booking</option>
+                        <option value="Heritage Tour">Heritage Tour</option>
+                        <option value="Family Vacation">Family Vacation</option>
+                        <option value="Custom Package">Custom Package</option>
+                    </select>
+                </label>
+                <label class="full-width">Extra message<textarea name="message" rows="5" placeholder="Share your preferences, stay type, or special needs..."></textarea></label>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit booking lead</button>
+        </form>
+        <div class="glass aside-card accent-panel">
+            <h3>Lead workflow</h3>
+            <ul class="feature-list">
+                <li>Form data is validated in the browser</li>
+                <li>Lead is saved to SQLite automatically</li>
+                <li>Owner notification record is created</li>
+                <li>Email alert can be sent if SMTP is enabled</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

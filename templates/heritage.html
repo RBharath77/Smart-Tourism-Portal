@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Heritage | Tourism Portal Pro{% endblock %}
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <span class="eyebrow">Curated collection</span>
+        <h1>Heritage destinations</h1>
+        <p>Explore iconic places with modern presentation, search-ready layout, and polished cards.</p>
+        <input id="siteSearch" class="search-input" type="text" placeholder="Search by name, category, or era...">
+    </div>
+</section>
+<section class="section-block compact-top">
+    <div class="container card-grid" id="siteGrid">
+        {% for site in sites %}
+        <article class="place-card glass searchable-card" data-search="{{ site.name|lower }} {{ site.category|lower }} {{ site.era|lower }}">
+            <img src="{{ site.image }}" alt="{{ site.name }}">
+            <div class="place-body">
+                <div class="meta-row"><span class="tag">{{ site.category }}</span><span>{{ site.era }}</span></div>
+                <h3>{{ site.name }}</h3>
+                <p>{{ site.description }}</p>
+                <a href="{{ url_for('heritage_detail', slug=site.slug) }}" class="text-link">See attraction →</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

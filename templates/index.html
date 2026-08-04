@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Home | Smart Tour{% endblock %}
+{% block content %}
+<section class="hero-section">
+    <div class="container hero-grid">
+        <div>
+            <span class="eyebrow">Luxury • Timeless • Unforgettable Journeys</span>
+
+<h1>Where Every Journey Becomes an Extraordinary Experience.</h1>
+
+<p class="hero-copy">
+Experience the perfect blend of luxury, adventure, and cultural discovery. From iconic heritage sites to breathtaking landscapes, our premium travel services and personalized tour packages ensure every journey is seamless, comfortable, and unforgettable.
+</p>
+            <div class="cta-row">
+                <a href="{{ url_for('booking') }}" class="btn btn-primary">Reserve a journey</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Talk to our team</a>
+            </div>
+            <!--<div class="mini-stats">
+                <div><strong>Luxury</strong><span>Unique brand theme</span></div>
+                <div><strong>SQLite</strong><span>Lead storage</span></div>
+                <div><strong>Instant</strong><span>Owner alerts</span></div>
+            </div>
+        </div>
+        <div class="hero-card glass showcase-card">
+            <div class="showcase-chip">Signature upgrade</div>
+            <h3>What changed in this version?</h3>
+            <ul class="feature-list">
+                <li>Unique premium GUI with twilight gold color system</li>
+                <li>Better section spacing, cards, hover motion, and glass panels</li>
+                <li>Advanced booking and contact lead forms</li>
+                <li>Database-backed lead saving for visitor details</li>
+                <li>Email-ready owner notification workflow</li>
+            </ul>-->
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <span class="eyebrow">Featured escapes</span>
+                <h2>Curated heritage highlights</h2>
+            </div>
+            <a href="{{ url_for('heritage') }}" class="text-link">Discover all destinations →</a>
+        </div>
+        <div class="card-grid">
+            {% for site in sites %}
+            <article class="place-card glass lift-card">
+                <img src="{{ site.image }}" alt="{{ site.name }}">
+                <div class="place-body">
+                    <span class="tag">{{ site.category }}</span>
+                    <h3>{{ site.name }}</h3>
+                    <p>{{ site.description }}</p>
+                    <a href="{{ url_for('heritage_detail', slug=site.slug) }}" class="text-link">Explore details →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-block compact-top">
+    <div class="container two-col">
+        <div class="glass info-panel">
+            <span class="eyebrow">Lead storage</span>
+            <h2>Every visitor message is saved securely</h2>
+            <p>Contact and booking details are stored in SQLite with source tracking, visitor information, and timestamps for future follow-up.</p>
+        </div>
+        <div class="glass info-panel accent-panel">
+            <span class="eyebrow">Owner notification</span>
+            <h2>Get notified when new leads arrive</h2>
+            <p>The website creates a stored notification for each new lead and can also send an SMTP email alert to the owner account.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

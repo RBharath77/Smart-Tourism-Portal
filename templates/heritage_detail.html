@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}{{ site.name }} | Tourism Portal Pro{% endblock %}
+{% block content %}
+<section class="section-block detail-top">
+    <div class="container detail-grid">
+        <img class="detail-image" src="{{ site.image }}" alt="{{ site.name }}">
+        <div class="glass detail-panel">
+            <span class="eyebrow">{{ site.category }}</span>
+            <h1>{{ site.name }}</h1>
+            <p>{{ site.description }}</p>
+            <div class="detail-meta">
+                <div><strong>Era</strong><span>{{ site.era }}</span></div>
+                <div><strong>Visiting hours</strong><span>{{ site.timing }}</span></div>
+            </div>
+            <h3>Highlights</h3>
+            <ul class="feature-list">
+                {% for item in site.highlights %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for('booking') }}" class="btn btn-primary">Book a heritage visit</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

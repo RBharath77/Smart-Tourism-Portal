@@ -1,0 +1,9 @@
+{
+  "name": "upgraded_tourism_portal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "python app.py",
+    "start": "python app.py"
+  }
+}
